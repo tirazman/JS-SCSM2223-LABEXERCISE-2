@@ -9,11 +9,10 @@
 <body>
 	<header>
 		<div class="header">
-			<h1>Task Board</h1>
-			<span id="taskcounterbadge" class="badge">0</span>
+			<h1>📋 My Task Board</h1>
+			<span id="taskcounterbadge" class="badge">0 tasks</span>
 			<div class="controls">
-				<label for="prioFilter">Filter Priority:</label>
-				<select id="prioFilter">
+				<select id="prioFilter" class="dropdown">
 					<option value="all">All</option>
 					<option value="low">Low</option>
 					<option value="med">Medium</option>
@@ -24,22 +23,32 @@
 	</header>
 
 	<main class="board">
-		<section id="todo" class="column">
-			<h2>To Do</h2>
-			<ul id="todo" class="taskList"></ul>
-			<button class="addBtn" onclick="openModal('todo')">+ Add Task</button>
+
+		<section id="todo" class="todo-column">
+			<div class="columnheader">
+				<h2>📘 To Do</h2>
+				<ul id="todo" class="taskList"></ul>
+				<button class="addBtn" onclick="openModal('todo')">+ Add Task</button>
+			</div>
 		</section>
 
-		<section id="inprogress" class="column">
-			<h2>In Progress</h2>
-			<ul id="inprogress" class="taskList"></ul>
-			<button class="addBtn" onclick="openModal('inprogress')">+ Add Task</button>
+		<section id="inprogress" class="ip-column">
+			<div class="columnheader">
+				<h2>⏳ In Progress</h2>
+				<ul id="inprogress" class="taskList"></ul>
+				<button class="addBtn" onclick="openModal('inprogress')">+ Add Task</button>
+			</div>
 		</section>
 
-		<section id="done" class="column">
-			<h2>Done</h2>
-			<ul id="done" class="taskList"></ul>
-			<button class="addBtn" onclick="openModal('done')">+ Add Task</button>
+		<section id="done" class="done-column">
+			<div class="columnheader">
+				<h2>✅ Done</h2>
+				<ul id="done" class="taskList"></ul>
+				<div class="btnAct">					
+					<button class="addBtn" onclick="openModal('done')">+ Add Task</button>
+					<button class="cleardoneBtn" onclick="openModal('done')">Clear All</button>
+				</div>
+			</div>
 		</section>
 	</main>
 
