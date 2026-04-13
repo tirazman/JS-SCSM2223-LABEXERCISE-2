@@ -87,6 +87,7 @@ h3 {
 	font-size: 1.0rem;
 	font-weight: 600;
 	letter-spacing: 0.5px;
+	margin: 0;
 }
 
 .badgeHigh { background: var(--light-red); color: var(--primary-red); }
@@ -128,6 +129,8 @@ h3 {
 	margin-bottom: 16px;
 	border-radius: 8px;
 	background: transparent;
+
+	box-shadow: none;
 	border: none;
 
 	position: relative;
@@ -206,6 +209,7 @@ button {
 .taskList {
 	list-style: none; /*remove bullet*/
 	min-height: 100px;
+	padding: 0; margin: 0;
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
@@ -228,6 +232,7 @@ button {
 	cursor: pointer;
 	display: block;
 	margin-right: 10px;
+	margin: 0;
 }
 
 .taskDate { 
@@ -249,7 +254,7 @@ button {
 
 .cardAct { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px}
 
-.cardHeader-Row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px }
+.cardHeaderRow { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px }
 
 
 .modal { 
