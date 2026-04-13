@@ -12,7 +12,7 @@
 	--primary-red:	  #D93025;
 	--light-red:	  #FCE8E6;
 	--primary-yellow: #F29900;
-	--ligth-yellow:	  #FEF7E0;
+	--light-yellow:	  #FEF7E0;
 	--primary-green:  #1E8E3E;
 	--light-green:	  #E6F4EA;
 
@@ -246,6 +246,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 1000;
 }
 
 .modalContent {
@@ -280,4 +281,12 @@ button {
 	border: 1px solid var(--color-border);
 	border-radius: 6px;
 	font-size: 0.9rem;
+}
+
+.is-hidden { display: none !important; }
+.fade-out { animation: fadeoutAnim 1.0s forwards; }
+
+@keyframes fadeoutAnim {
+	from { opacity: 1; transform: scale(1.0); }
+	to { opacity: 0; transform: scale(0.9); }
 }

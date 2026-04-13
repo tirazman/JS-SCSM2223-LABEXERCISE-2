@@ -24,29 +24,29 @@
 
 	<main class="board">
 
-		<section id="todo" class="todo-column">
+		<section id="todo" class="column todo-column">
 			<div class="columnheader">
 				<h2>📘 To Do</h2>
-				<ul id="todo" class="taskList"></ul>
+				<ul id="todo-list" class="taskList"></ul>
 				<button class="addBtn" onclick="openModal('todo')">+ Add Task</button>
 			</div>
 		</section>
 
-		<section id="inprogress" class="ip-column">
+		<section id="inprogress" class="column ip-column">
 			<div class="columnheader">
 				<h2>⏳ In Progress</h2>
-				<ul id="inprogress" class="taskList"></ul>
+				<ul id="inprogress-list" class="taskList"></ul>
 				<button class="addBtn" onclick="openModal('inprogress')">+ Add Task</button>
 			</div>
 		</section>
 
-		<section id="done" class="done-column">
+		<section id="done" class="column done-column">
 			<div class="columnheader">
 				<h2>✅ Done</h2>
-				<ul id="done" class="taskList"></ul>
+				<ul id="done-list" class="taskList"></ul>
 				<div class="btnAct">					
 					<button class="addBtn" onclick="openModal('done')">+ Add Task</button>
-					<button class="cleardoneBtn" onclick="openModal('done')">Clear All</button>
+					<button class="cleardoneBtn" id="clearAllBtn">Clear All</button>
 				</div>
 			</div>
 		</section>
@@ -54,7 +54,7 @@
 
 	<div id="taskModal" class="hiddenModal">
 		<div class="modalContent">
-			<h3 id="modalTitle">Add New Task</h3>
+			<h3 id="modalTitle">Task Details</h3>
 
 			<input type="hidden" id="taskID">
 			<input type="hidden" id="taskStatus">
