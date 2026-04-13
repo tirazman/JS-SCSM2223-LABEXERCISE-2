@@ -49,9 +49,11 @@ h1 {
 
 h2 {
 	font-family: "Segoe UI";
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	font-weight: 700;
-	margin: 0;
+	margin-left: -20px;
+	margin-top: -8px;
+
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -110,8 +112,9 @@ h3 {
 .column {
 	flex: 1;
 	min-width: 300px;
-	background: var(--color-primary);
+	background: var(--bg-card);
 	border-radius: 10px;
+	padding: 16px;
 }
 
 .columnheader {
@@ -119,11 +122,11 @@ h3 {
 	justify-content: space-between;
 	align-items: center;
 
-	padding: 12px 6px;
+	padding: 0;
 	margin-bottom: 16px;
 	border-radius: 8px;
-	background: var(--bg-card);
-	box-shadow: 0 1px 2px var(--color-border);
+	background: transparent;
+	border: none;
 
 	position: relative;
 	border-top: none;
@@ -135,8 +138,8 @@ h3 {
 .columnheader::before {
 	content: "";
 	position: absolute;
-	left: 0; top: 0; bottom: 0; width: 4px;
-	border-radius: 10px;
+	left: -16px; top: -16px; bottom: -8px; width: 4px;
+	border-radius: 10px ;
 }
 
 .todo-column .columnheader::before {
@@ -196,6 +199,9 @@ button {
 .taskList {
 	list-style: none;
 	min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
 .taskCard {
@@ -203,8 +209,9 @@ button {
 	padding: 16px;
 	border-radius: 8px;
 	margin-bottom: 12px;
+	border: 1px solid var(--color-border);
 	box-shadow: 0 1px 3px var(--color-border);
-	border-radius: 1px solid var(--bg-card);
+	border-radius: 8px;
 	transition: opacity 0.3s ease;
 }
 
@@ -212,7 +219,7 @@ button {
 	font-size: 1rem; font-weight: 600; 
 	color: var(--color-text); 
 	cursor: pointer;
-	flex: 1;
+	display: block;
 	margin-right: 10px;
 }
 
@@ -233,7 +240,7 @@ button {
 	line-height: 1.4;
 }
 
-.cardAct { display: flex; gap: 8px; }
+.cardAct { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px}
 
 .cardHeader-Row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px }
 
@@ -242,11 +249,12 @@ button {
 	position: fixed; 
 	top: 0; left: 0; 
 	width: 100%; height: 100%;
-	background: var(--bg-card);
+	background: transparent;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
+	backdrop-filter: blur(2px);
 }
 
 .modalContent {
